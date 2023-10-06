@@ -1,0 +1,58 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+/* CONTAINER DI BASE, DA DESKTOP GRANDE */
+.container {
+	width: 80%;
+	margin: 0 auto;
+	background-color: blue;
+	color: white;
+	padding: 1rem;
+
+	min-height: 100vh;
+	display: flex;
+	flex-direction: row;
+}
+
+/* CONTAINER, DA DESKTOP PICCOLO */
+@media screen and (max-width: 992px) {
+	.container {
+		background-color: greenyellow;
+	}
+}
+
+/* CONTAINER, DA TABLET */
+@media screen and (max-width: 768px) {
+	.container {
+		background-color: orange;
+	}
+}
+
+/* CONTAINER, DA SMARTPHONE */
+@media screen and (max-width: 480px) {
+	.container {
+		background-color: red;
+		flex-direction: column; /* <--------------------- ATTENZIONE! */
+	}
+}
+
+/* COLONNA DI BASE, DA DESKTOP GRANDE */
+.column {
+	width: 25%;
+	background-color: violet;
+	border: solid 2px white;
+}
+
+/* COLONNA, DA SMARTPHONE */
+@media screen and (max-width: 480px) {
+	.column {
+		width: 100%;
+	}
+}
